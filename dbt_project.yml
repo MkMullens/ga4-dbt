@@ -44,6 +44,6 @@ models:
 vars:
   ga4:
     project: "lmbk-ga4-bigquery"
-    dataset: "dbt_development"
+    dataset: "analytics_310142291"
     start_date: "20231219" # Earliest date to load
     static_incremental_days: 3 # Number of days to scan and reprocess on each run
