@@ -2,8 +2,8 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project'
-version: '1.0.0'
+name: 'ga4'
+version: '5.1.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
@@ -40,3 +40,10 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+
+vars:
+  ga4:
+    project: "lmbk-ga4-bigquery"
+    dataset: "dbt_development"
+    start_date: "20231219" # Earliest date to load
+    static_incremental_days: 3 # Number of days to scan and reprocess on each run
